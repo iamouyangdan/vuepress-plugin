@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-markdown-checkbox",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "VuePress plugin - extends markdown checkbox or tasklist",
     "author": "ouyangdan",
     "main": "lib/index.js",

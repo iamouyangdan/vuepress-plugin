@@ -18,7 +18,7 @@ module.exports = function(md, options) {
 		var tokens = state.tokens;
 		for (var i = 2; i < tokens.length; i++) {
 			if (isTodoItem(tokens, i)) {
-				// console.log(tokens[i], tokens[i-2])
+				console.log(tokens[i - 1])
 				todoify(tokens[i], state.Token);
                 changeTodoListItem(tokens, i)
 				attrSet(tokens[i-2], 'class', 'task-list-item' + (!disableCheckboxes ? ' enabled' : ''));
@@ -53,15 +53,18 @@ function isTodoItem(tokens, index) {
 	return isInline(tokens[index]) &&
 	       isParagraph(tokens[index - 1]) &&
 	       isListItem(tokens[index - 2]) &&
-	       startsWithTodoMarkdown(tokens[index]) &&
-		   tokens[index - 2].tag === 'li' && 
-		   tokens[index + 2].tag === 'li'
+	       startsWithTodoMarkdown(tokens[index])
 		   ;
 }
 // 取消li样式
 function changeTodoListItem(tokens, i) {
-	tokens[i-2].tag = 'p'
-	tokens[i+2].tag = 'p'
+	if(
+		tokens[i - 2].tag === 'li' && 
+		tokens[i + 2].tag === 'li'
+	) {
+		tokens[i-2].tag = 'p'
+		tokens[i+2].tag = 'p'
+	}
 }
 	
 function todoify(token, TokenConstructor) {

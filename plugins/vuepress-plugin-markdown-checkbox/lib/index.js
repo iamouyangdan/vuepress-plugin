@@ -7,14 +7,14 @@ const taskLists = require('./core')
 
 // 可接受 autoSort参数和自定义排序函数
 // 排序重启项目时生效
-const extendsMarkdowCheckbox = ({enabled = true} = {}) => {
+const extendsMarkdowCheckbox = ({enabled = true, label = true, labelAfter = false} = {}) => {
     return (app) => {
         console.log('app.dir', app.dir.source())
  
         return {
           name: 'vuepress-plugin-markdown-checkbox',
           extendsMarkdown: (md) => {
-            md.use(taskLists, { enabled, label: true, labelAfter: true })
+            md.use(taskLists, { enabled, label, labelAfter })
           }
           // ...
         }
