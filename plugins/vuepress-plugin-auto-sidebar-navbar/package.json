@@ -1,0 +1,21 @@
+{
+    "name": "vuepress-plugin-auto-sidebar-navbar",
+    "version": "1.0.1",
+    "description": "VuePress plugin - auto sidebar and navbar",
+    "author": "ouyangdan",
+    "main": "lib/index.js",
+    "keywords": [
+        "vuepress-plugin",
+        "vuepress",
+        "plugin",
+        "sidebar",
+        "navbar"
+    ],
+    "files": [
+        "lib"
+    ],
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    }
+}
