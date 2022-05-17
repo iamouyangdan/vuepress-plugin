@@ -1,7 +1,7 @@
 {
     "name": "vuepress-plugin-auto-sidebar-navbar",
-    "version": "1.0.8",
-    "description": "VuePress plugin - auto sidebar and navbar",
+    "version": "1.0.9",
+    "description": "VuePress2 插件 - 自动生成sidebar和navbar插件（auto sidebar and navbar)",
     "author": "ouyangdan",
     "main": "lib/index.js",
     "repository": {
