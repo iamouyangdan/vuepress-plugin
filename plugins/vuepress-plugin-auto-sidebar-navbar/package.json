@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-auto-sidebar-navbar",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "VuePress plugin - auto sidebar and navbar",
     "author": "ouyangdan",
     "main": "lib/index.js",
