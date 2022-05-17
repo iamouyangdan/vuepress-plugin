@@ -22,9 +22,8 @@ function sort(rootDir, target, sortFn) {
         }  
         _rules.push(rule)
     })
-    console.log('rules', _rules)
+    // console.log('rules', _rules)
     _rules.sort(sortList)
-    // console.log('after rules', _rules)
     return _rules.map(i => i.origin)
 }
 function genNavbar(sourceDir, targetPath, target = [], sortFn) {
@@ -34,16 +33,17 @@ function genNavbar(sourceDir, targetPath, target = [], sortFn) {
     // 初始化分级目录，其他级别为子数组
     const files = fs.readdirSync(sourceDir)
     const dirNameList = files.filter(item => item !== 'README.md' && item.indexOf('.') !== 0)
-    dirNameList.forEach(key => {   
+    dirNameList.forEach(key => {
         // 初始化第一级为数组的第一项，参考官方文档   
         target.push({
+            activeMatch: `/${encodeURI(key)}/`,
             link: `/${key}/`,
             text: key
         })
     })
     target = sort(sourceDir, target, sortFn)
 
-    console.log('target', target)
+    // console.log('target', target)
     // 写入文件
     const content = `module.exports = ${JSON.stringify(target, undefined, 2)}`;
     fs.writeFile(targetPath, content, { encoding: 'utf8' }, err => {console.log(err);});     

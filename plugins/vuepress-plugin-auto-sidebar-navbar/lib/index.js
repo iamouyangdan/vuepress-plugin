@@ -11,8 +11,12 @@ const createSidebar = (options = {}) => {
         const navbarUrl = options.navbarUrl || '.vuepress/navbar.js'
         const sidebarPath = path.resolve(sourceDir, sidebarUrl)
         const navbarPath = path.resolve(sourceDir, navbarUrl)
-        genSidebar(sourceDir, sidebarPath, {}, options.sortFn)
-        genNavbar(sourceDir, navbarPath, [], options.sortFn)
+        if(!options.skipSidebar) {
+          genSidebar(sourceDir, sidebarPath, {}, options.sortFn)
+        }
+        if(!options.skipNavbar) {
+          genNavbar(sourceDir, navbarPath, [], options.sortFn)
+        }
         return {
           name: 'vuepress-plugin-auto-sidebar-navbar',
           // ...

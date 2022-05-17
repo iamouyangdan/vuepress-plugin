@@ -1,9 +1,17 @@
 {
     "name": "vuepress-plugin-markdown-checkbox",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "VuePress plugin - extends markdown checkbox or tasklist",
     "author": "ouyangdan",
     "main": "lib/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iamouyangdan/vuepress-plugin.git"
+    },
+    "bugs": {
+        "url": "https://github.com/iamouyangdan/vuepress-plugin/issues"
+    },
+    "homepage": "https://github.com/iamouyangdan/vuepress-plugin/tree/main/plugins/vuepress-plugin-markdown-checkbox#readme",
     "keywords": [
         "vuepress-plugin",
         "vuepress",

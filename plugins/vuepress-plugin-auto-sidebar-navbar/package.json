@@ -1,9 +1,17 @@
 {
     "name": "vuepress-plugin-auto-sidebar-navbar",
-    "version": "1.0.1",
+    "version": "1.0.7",
     "description": "VuePress plugin - auto sidebar and navbar",
     "author": "ouyangdan",
     "main": "lib/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iamouyangdan/vuepress-plugin.git"
+    },
+    "bugs": {
+        "url": "https://github.com/iamouyangdan/vuepress-plugin/issues"
+    },
+    "homepage": "https://github.com/iamouyangdan/vuepress-plugin/tree/main/plugins/vuepress-plugin-auto-sidebar-navbar#readme",
     "keywords": [
         "vuepress-plugin",
         "vuepress",

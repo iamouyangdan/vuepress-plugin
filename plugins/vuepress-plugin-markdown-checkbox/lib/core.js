@@ -18,7 +18,7 @@ module.exports = function(md, options) {
 		var tokens = state.tokens;
 		for (var i = 2; i < tokens.length; i++) {
 			if (isTodoItem(tokens, i)) {
-				console.log(tokens[i - 1])
+				// console.log(tokens[i - 1])
 				todoify(tokens[i], state.Token);
                 changeTodoListItem(tokens, i)
 				attrSet(tokens[i-2], 'class', 'task-list-item' + (!disableCheckboxes ? ' enabled' : ''));
